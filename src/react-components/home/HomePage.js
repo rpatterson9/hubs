@@ -53,6 +53,7 @@ export function HomePage() {
 
   const canCreateRooms = !configs.feature("disable_room_creation") || auth.isAdmin;
   const email = auth.email;
+
   return (
     <PageContainer className={styles.homePage}>
       <Container>
@@ -96,9 +97,8 @@ export function HomePage() {
       <Container>
         <Column center grow>
           {canCreateRooms && <CreateRoomButton />}
-        </Column>
-        <Column center grow>
-          {canCreateRooms && <CreateEventButton />}
+          <br />
+          {auth.isSignedIn ? <CreateEventButton /> : null}
         </Column>
       </Container>
       {configs.feature("show_feature_panels") && (

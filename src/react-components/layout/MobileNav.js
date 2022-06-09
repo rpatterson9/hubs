@@ -22,7 +22,7 @@ export function MobileNav({ isHmc, showDocsLink, docsUrl, showSourceLink, showCo
               <ul>
                 {isHmc && (
                   <li>
-                    <a href="/spoke">
+                    <a href="/metaeditor">
                       <FormattedMessage id="header.spoke" defaultMessage="Spoke" />
                     </a>
                   </li>

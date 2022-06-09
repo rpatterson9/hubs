@@ -20,7 +20,7 @@ export function CreateEventButton() {
       preset="landing"
       onClick={e => {
         e.preventDefault();
-        createAndRedirectToNewHub(roomName, "6JzWnLq", false);
+        createAndRedirectToNewHub(roomName, "Qs9ds1y", false);
       }}
     >
       <FormattedMessage id="create-event-button" defaultMessage="Create Event" />

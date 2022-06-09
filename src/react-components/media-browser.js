@@ -115,7 +115,7 @@ const searchPlaceholderMessages = defineMessages({
   gifs: { id: "media-browser.search-placeholder.gifs", defaultMessage: "Search for GIFs..." },
   twitch: { id: "media-browser.search-placeholder.twitch", defaultMessage: "Search for Twitch streams..." },
   sketchfab: { id: "media-browser.search-placeholder.sketchfab", defaultMessage: "Search Sketchfab Models..." },
-  default: { id: "media-browser.search-placeholder.default", defaultMessage: "Search..." }
+  default: { id: "media-browser.search-placeholder.default", defaultMessage: "Find..." }
 });
 
 const emptyMessages = defineMessages({
@@ -391,10 +391,10 @@ class MediaBrowserContainer extends Component {
       searchDescription = (
         <>
           {poweredByMessages[urlSource] ? intl.formatMessage(poweredByMessages[urlSource]) : ""}
-          {poweredByMessages[urlSource] && PRIVACY_POLICY_LINKS[urlSource] ? " | " : ""}
+          {poweredByMessages[urlSource] && PRIVACY_POLICY_LINKS[urlSource] ? " <> " : ""}
           {PRIVACY_POLICY_LINKS[urlSource] && (
             <a href={PRIVACY_POLICY_LINKS[urlSource]} target="_blank" rel="noreferrer noopener">
-              <FormattedMessage id="media-browser.privacy_policy" defaultMessage="Privacy Policy" />
+              <FormattedMessage id="media-browser.privacy_policy" defaultMessage="." />
             </a>
           )}
         </>
@@ -406,7 +406,7 @@ class MediaBrowserContainer extends Component {
             <>
               {intl.formatMessage(poweredByMessages.scenes, {
                 editorName: (
-                  <a href="/spoke" target="_blank" rel="noreferrer noopener">
+                  <a href="/metaeditor" target="_blank" rel="noreferrer noopener">
                     {configs.translation("editor-name")}
                   </a>
                 )
