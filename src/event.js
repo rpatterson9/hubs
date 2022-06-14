@@ -24,8 +24,8 @@ function Root() {
       <ThemeProvider store={store}>
         <AuthContextProvider store={store}>
           <TokenPageLayout>
-            <h1>Create an event</h1>
             <TokensContainer />
+            <h1>Create an event</h1>
           </TokenPageLayout>
         </AuthContextProvider>
       </ThemeProvider>

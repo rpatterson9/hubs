@@ -23,7 +23,7 @@ export function SceneUrlModal({ enableSpoke, editorName, onValidateUrl, onSubmit
               defaultMessage="Paste a URL to a {editorName} scene or a URL to a <glblink>GLB</glblink>."
               values={{
                 editorName: (
-                  <a href="/metaeditor" target="_blank" rel="noopener noreferrer">
+                  <a href="/spoke" target="_blank" rel="noopener noreferrer">
                     {editorName}
                   </a>
                 ),

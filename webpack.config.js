@@ -300,7 +300,7 @@ module.exports = async (env, argv) => {
       cloud: path.join(__dirname, "src", "cloud.js"),
       signin: path.join(__dirname, "src", "signin.js"),
       verify: path.join(__dirname, "src", "verify.js"),
-      tokens: path.join(__dirname, "src", "tokens.js"),
+      event: path.join(__dirname, "src", "event.js"),
       "whats-new": path.join(__dirname, "src", "whats-new.js"),
       "webxr-polyfill": path.join(__dirname, "src", "webxr-polyfill.js")
     },
@@ -324,8 +324,8 @@ module.exports = async (env, argv) => {
           { from: /^\/discord/, to: "/discord.html" },
           { from: /^\/cloud/, to: "/cloud.html" },
           { from: /^\/verify/, to: "/verify.html" },
-          { from: /^\/tokens/, to: "/tokens.html" },
-          { from: /^\/whats-new/, to: "/whats-new.html" }
+          { from: /^\/event/, to: "/event.html" },
+          { from: /^\/what/, to: "/what.html" }
         ]
       },
       before: function(app) {
@@ -611,7 +611,7 @@ module.exports = async (env, argv) => {
         filename: "verify.html"
       }),
       htmlPagePlugin({
-        filename: "tokens.html"
+        filename: "event.html"
       }),
       new CopyWebpackPlugin([
         {

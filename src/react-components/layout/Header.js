@@ -37,8 +37,8 @@ export function Header({
             </li>
             {enableSpoke && (
               <li>
-                <a href="/metaeditor">
-                  {isHmc ? <FormattedMessage id="header.spoke" defaultMessage="Spoke" /> : editorName}
+                <a href="/spoke">
+                  {isHmc ? <FormattedMessage id="header.spoke" defaultMessage="Spoke" /> : "MetaCreator+"}
                 </a>
               </li>
             )}

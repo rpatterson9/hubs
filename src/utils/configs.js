@@ -2,7 +2,7 @@ import appLogo from "../assets/images/app-logo.png";
 import appLogoDark from "../assets/images/app-logo-dark.png";
 import companyLogo from "../assets/images/company-logo.png";
 import homeHeroBackground from "../assets/images/home-hero-background-unbranded.png";
-import sceneEditorLogo from "../assets/images/editor-logo.png";
+import sceneEditorLogo from "../assets/images/logo2.png";
 import { getLocale, getMessage } from "./i18n";
 
 // Read configs from global variable if available, otherwise use the process.env injected from build.

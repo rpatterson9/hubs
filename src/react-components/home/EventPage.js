@@ -1,10 +1,9 @@
-/* eslint-disable @calm/react-intl/missing-formatted-message */
 import React, { useContext, useEffect } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 import configs from "../../utils/configs";
 import { CreateRoomButton } from "./CreateRoomButton";
-// import { CreateEventButton } from "./CreateEventButton";
+import { CreateEventButton } from "./CreateEventButton";
 import { useFavoriteRooms } from "./useFavoriteRooms";
 import { usePublicRooms } from "./usePublicRooms";
 import styles from "./HomePage.scss";
@@ -99,12 +98,7 @@ export function HomePage() {
         <Column center grow>
           {canCreateRooms && <CreateRoomButton />}
           <br />
-
-          {auth.isSignedIn ? (
-            <a href="/event">
-              <Button>Create Event</Button>
-            </a>
-          ) : null}
+          {auth.isSignedIn ? <CreateEventButton /> : null}
         </Column>
       </Container>
       {configs.feature("show_feature_panels") && (
@@ -194,13 +188,10 @@ export function HomePage() {
       )}
       <Container>
         <Column center grow>
-          <Button thin preset="landing" as="a" href="/event">
-            <FormattedMessage id="home-page.have-code" defaultMessage="1111111" />
+          <Button thin preset="landing" as="a" href="/">
+            <FormattedMessage id="home-page.have-code" defaultMessage="MetaversePlus" />
           </Button>
-        </Column>{" "}
-        <Button thin preset="landing" as="a" href="/tokens">
-          <FormattedMessage id="home-page.have-code" defaultMessage="2222222" />
-        </Button>
+        </Column>
       </Container>
       {isHmc() ? (
         <Column center>

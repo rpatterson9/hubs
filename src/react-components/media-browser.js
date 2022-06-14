@@ -406,7 +406,7 @@ class MediaBrowserContainer extends Component {
             <>
               {intl.formatMessage(poweredByMessages.scenes, {
                 editorName: (
-                  <a href="/metaeditor" target="_blank" rel="noreferrer noopener">
+                  <a href="/spoke" target="_blank" rel="noreferrer noopener">
                     {configs.translation("editor-name")}
                   </a>
                 )
