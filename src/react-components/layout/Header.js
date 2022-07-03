@@ -30,11 +30,11 @@ export function Header({
       <Container as="div" className={styles.container}>
         <nav>
           <ul>
-            <li>
-              <a href="/" className={styles.homeLink}>
-                Home
-              </a>
-            </li>
+          <li>
+                <a href="/spoke">
+                  {isHmc ? <FormattedMessage id="header.spoke" defaultMessage="Spoke" /> : editorName}
+                </a>
+              </li>
             {enableSpoke && (
               <li>
                 <a href="/spoke">

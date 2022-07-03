@@ -25,7 +25,7 @@ header {
 
     li {
       &:first-child {
-        padding-top: 20px;
+
         @media(min-width: theme.$breakpoint-lg) {
           img {
             width: 100%;
@@ -33,7 +33,7 @@ header {
           }
         }
       }
-      padding-top: 20px;
+
 
       @media(min-width: theme.$breakpoint-lg) {
         padding-top: 0;
@@ -68,16 +68,16 @@ header {
   align-items: center;
 
   @media(min-width: theme.$breakpoint-lg) {
-    height: 80px;
+    height: 70px;
     flex-direction: row;
-    align-items: inherit;
+    align-items: center;
   }
 }
 
 :local(.home-link) {
-  display: inline-block;
+
   width: 124px;
-  height: 83px;
+
   @media(min-width: theme.$breakpoint-lg) {
    img {
     height: 32px;
